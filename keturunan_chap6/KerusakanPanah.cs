@@ -7,12 +7,6 @@ namespace keturunan_chap6
     class KerusakanPanah
     {
 
-        /// <summary>
-        /// The constructor calculates damage based on default Magic
-        /// and Flaming values and a starting 3d6 roll.
-        /// </summary>
-        /// <param name="startingRoll">Starting 3d6 roll</param>
-        /// 
         public KerusakanPanah(int rollMulai)
         {
             this.roll = rollMulai;
@@ -50,7 +44,7 @@ namespace keturunan_chap6
                 this.keajaiban = value;
                 HitungKerusakan();
             }
-        }
+        } // END Keajaiban
 
         private bool nyala;
 
@@ -63,7 +57,7 @@ namespace keturunan_chap6
                 this.nyala = value;
                 HitungKerusakan();
             }
-        }
+        }// END Nyala
 
 
 
@@ -74,28 +68,7 @@ namespace keturunan_chap6
             if (Keajaiban) kerusakanDasar *= PENGALI_AJIB;
             if (Nyala) Kerusakan = (int)Math.Ceiling(kerusakanDasar + RUSAK_TERBAKAR);
             else Kerusakan = (int)Math.Ceiling(kerusakanDasar);
-        }
+        }//END HitungKerusakan
 
-        //public void AturKeajaiban(bool Keajaiban)
-        //{
-        //    if (Keajaiban)
-        //    {
-        //        PengaliAjaib = 1.75M;
-        //    }
-        //    else
-        //    {
-        //        PengaliAjaib = 1M;
-        //    }
-        //    HitungKerusakan();
-        //}// end void
-
-        //public void AturNyalaApi(bool Nyala)
-        //{
-        //    HitungKerusakan();
-        //    if (Nyala)
-        //    {
-        //        Kerusakan += LUKA_BAKAR;
-        //    }
-        //}// end void
-    }
-}
+    }//END Class
+}//END ALL
