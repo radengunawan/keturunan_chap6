@@ -6,20 +6,20 @@ namespace keturunan_chap6
 {
     class KerusakanPanah
     {
-
+        /*CONSTRUCTOR*/
         public KerusakanPanah(int rollMulai)
         {
             this.roll = rollMulai;
         }
 
+        /*FIELDS*/
         //public const int LUKA_DASAR = 3;
         //public const int LUKA_BAKAR = 2;
         private const decimal PENGALI_DASAR = 0.35M;
         private const decimal PENGALI_AJIB = 2.5M;
         private const decimal RUSAK_TERBAKAR = 1.25M;
 
-
-
+        /*METHODS*/
         public int Roll
         {
             get { return roll; }

@@ -5,7 +5,25 @@ using System.Text;
 namespace keturunan_chap6
 {
     class KerusakanPedang
+
     {
+
+        /// <constructor>
+        /// The constructor calculates damage based on default Magic
+        /// and Flaming values and a starting 3d6 roll.
+        /// </constructor>
+        /// <param name="startingRoll">Starting 3d6 roll</param>
+        public KerusakanPedang(int startingRoll)
+        {
+            roll = startingRoll;
+            CalculateDamage();
+        }  // END 
+
+
+        /// <FIELDS>
+        /// Fields are the internal class identity.
+        /// They stores private data fields of the class, which are secret relative to another class.
+        /// </FIELDS>
         private const int BASE_DAMAGE = 3;
         private const int FLAME_DAMAGE = 2;
 
@@ -43,16 +61,7 @@ namespace keturunan_chap6
             if (Flaming) Damage += FLAME_DAMAGE;
         }//end CalculateDamage
 
-        /// <summary>
-        /// The constructor calculates damage based on default Magic
-        /// and Flaming values and a starting 3d6 roll.
-        /// </summary>
-        /// <param name="startingRoll">Starting 3d6 roll</param>
-        public KerusakanPedang(int startingRoll)
-        {
-            roll = startingRoll;
-            CalculateDamage();
-        }  // END 
+        
 
 
         private bool flaming;
